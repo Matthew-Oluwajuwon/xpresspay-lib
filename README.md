@@ -33,6 +33,7 @@ payWithXpressPay({
   transactionId: Math.floor(Math.random() * 1000000),
   email: "sample@mail.com",
   public_key: "xxxxxxxxxxxxxxxxxxxxxxxxxx",
+  callbackurl: "https://example.com",
   currency: "NGN",
   productId: "1001",
   applyConviniencyCharge: true,
@@ -70,11 +71,12 @@ To initialize the transaction, you'll need to pass information such as email, fi
 | applyConviniencyCharge | `boolean` | undefined | `false` | specify whether to apply charge for this customer transaction.
 | productDescription | `string` | undefined | `false` | description number of the product your customer want to pay to.
 | mode | `string` | `Debug` | `true` | Allowed values are `Debug` or `Live`.
+| authorizationUrl | `string` | undefined | `false` | This is the url generated from your backend that can be redirected to.
 | callBackUrl | `string` | your current url page | `false` | CallbackUrl is the url you want your customer to be redirected to when payment is successful. The default url is the page url where customer intialized payment.
 | bodyColor | `string` | null | `false` | your prefered customized color for the payment page body.
 | buttonColor | `string` | null | `false` | your prefered customized color for the payment page buttons.
 | footerText | `string` | null | `false` | your prefered customized text for the payment page footer.
 | footerLogo | `string` | null | `false` | your prefered customized logo for the payment page footer.
 | metadata | `object` | empty `object` | `false` | Object containing any extra information you want recorded with the transaction.
-| DISPLAY_MODE | `string` | `POPUP`  | `false` | This defines the appearance of the payment gateway either a popup or page
+| DISPLAY_MODE | `string` | `POPUP`  | `false` | This defines the appearance of the payment gateway either a popup or page, noted that this can also be used inconjunction with authorizationUrl or not.
 | ENV_MODE | `string` | `DEBUG` | `false` | This defines the environment to be used `DEBUG` means our test environment, `TEST` means our payment gateway sandbox, while `LIVE` means production
