@@ -14,11 +14,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/muyiwer/XpressPayPlugin/tree/main/XpressPayPop"
+    "url": "https://github.com/Matthew-Oluwajuwon/xpresspay-lib"
   },
-  "homepage": "https://github.com/muyiwer/XpressPayPlugin/tree/main/XpressPayPop/README.md",
+  "homepage": "https://github.com/Matthew-Oluwajuwon/xpresspay-lib/README.md",
   "bugs": {
-    "url": "https://github.com/muyiwer/XpressPayPlugin/tree/main/XpressPayPop/issues"
+    "url": "https://github.com/Matthew-Oluwajuwon/xpresspay-lib/issues"
   },
   "typesPublisher": "@types/xpresspay",
   "author": "Xpress Payment Solutions",
