@@ -12,7 +12,19 @@
     "gateway",
     "PG"
   ],
-  "author": "Xpresspayments solution limited",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muyiwer/XpressPayPlugin/tree/main/XpressPayPop"
+  },
+  "homepage": "https://github.com/muyiwer/XpressPayPlugin/tree/main/XpressPayPop/README.md",
+  "bugs": {
+    "url": "https://github.com/muyiwer/XpressPayPlugin/tree/main/XpressPayPop/issues"
+  },
+  "typesPublisher": "@types/xpresspay",
+  "author": "Xpress Payment Solutions",
   "license": "MIT",
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
 }
