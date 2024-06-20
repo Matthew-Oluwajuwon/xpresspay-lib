@@ -54,7 +54,7 @@ payWithXpressPay({
 });
 ```
 
-#### Request for calling xpresspay popup function.
+#### Request for calling xpresspay function.
 
 If you want to implement initialize payment from backend, just pass `authorizationUrl`, you can also decide whether to use a popup mode or page mode by passing either value to the `DISPLAY_MODE`
 
@@ -76,3 +76,5 @@ To initialize the transaction, you'll need to pass information such as email, fi
 | footerText | `string` | null | `false` | your prefered customized text for the payment page footer.
 | footerLogo | `string` | null | `false` | your prefered customized logo for the payment page footer.
 | metadata | `object` | empty `object` | `false` | Object containing any extra information you want recorded with the transaction.
+| DISPLAY_MODE | `string` | `POPUP`  | `false` | This defines the appearance of the payment gateway either a popup or page
+| ENV_MODE | `string` | `DEBUG` | `false` | This defines the environment to be used `DEBUG` means our test environment, `TEST` means our payment gateway sandbox, while `LIVE` means production
