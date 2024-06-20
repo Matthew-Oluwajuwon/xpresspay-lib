@@ -3,11 +3,11 @@ declare namespace XpressPayPop {
     type DISPLAY_MODE = 'POPUP' | 'PAGE';
   
     interface SetupOptions {
-      public_key: string;
-      email: string;
-      amount: string;
-      transactionId: string;
-      currency: string;
+      public_key?: string;
+      email?: string;
+      amount?: string;
+      transactionId?: string;
+      currency?: string;
       callbackUrl?: string;
       metadata?: any;
       productId?: string;
