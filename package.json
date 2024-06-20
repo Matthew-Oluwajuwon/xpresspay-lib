@@ -1,0 +1,18 @@
+{
+  "name": "xpresspay",
+  "version": "1.0.3",
+  "description": "A Javasript library for integrating with the XpressPay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "xpresspay",
+    "payment",
+    "gateway",
+    "PG"
+  ],
+  "author": "Xpresspayments solution limited",
+  "license": "MIT",
+  "types": "./index.d.ts"
+}
