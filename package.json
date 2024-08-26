@@ -1,6 +1,6 @@
 {
   "name": "xpresspay",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "A Javasript library for integrating with the XpressPay",
   "main": "index.js",
   "scripts": {

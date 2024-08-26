@@ -1,30 +1,35 @@
 // Function to load the XpressPay script
-function loadXpressPayScript() {
-    return new Promise((resolve, reject) => {
-      if (document.getElementById('xpresspay-script')) {
-        resolve();
-        return;
-      }
-  
-      const script = document.createElement("script");
-      script.setAttribute("src", "https://test.xpresspayments.com:8032/inlineXpressPayPop.js");
-      script.setAttribute("id", "xpresspay-script");
-      script.onload = resolve;
-      script.onerror = reject;
-      document.head.appendChild(script);
-    });
-  }
+function loadXpressPayScript(ENV_MODE) {
+  return new Promise((resolve, reject) => {
+    if (document.getElementById("xpresspay-script")) {
+      resolve();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.setAttribute(
+      "src",
+      ENV_MODE === "DEBUG"
+        ? ""
+        : ENV_MODE === "TEST"
+        ? ""
+        : "https://test.xpresspayments.com:8032/inlineXpressPayPop.js"
+    );
+    script.setAttribute("id", "xpresspay-script");
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+}
 
 function payWithXpressPay(config) {
-  loadXpressPayScript()
+  loadXpressPayScript(config.ENV_MODE)
     .then(() => {
       XpressPayPop.setup({
         public_key: config.public_key,
         email: config.email,
         amount: config.amount,
-        transactionId:
-          config.transactionId ||
-          "" + Math.floor(Math.random() * 1000000000 + 1),
+        transactionId: config.transactionId || "" + String(Date.now()),
         currency: config.currency || "NGN",
         callbackUrl: config.callbackUrl,
         metadata: config.metadata,
