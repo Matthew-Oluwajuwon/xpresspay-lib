@@ -9,7 +9,7 @@ function loadXpressPayScript(ENV_MODE) {
     const script = document.createElement("script");
     script.setAttribute(
       "src",
-      ENV_MODE === "DEBUG"
+      ENV_MODE === "LIVE"
         ? ""
         : ENV_MODE === "TEST"
         ? ""
