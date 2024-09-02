@@ -1,5 +1,5 @@
 // Function to load the XpressPay script
-function loadXpressPayScript(ENV_MODE) {
+function loadXpressPayScript() {
   return new Promise((resolve, reject) => {
     if (document.getElementById("xpresspay-script")) {
       resolve();
@@ -9,11 +9,7 @@ function loadXpressPayScript(ENV_MODE) {
     const script = document.createElement("script");
     script.setAttribute(
       "src",
-      ENV_MODE === "LIVE"
-        ? ""
-        : ENV_MODE === "TEST"
-        ? ""
-        : "https://test.xpresspayments.com:8032/inlineXpressPayPop.js"
+      "https://test.xpresspayments.com:8032/inlineXpressPayPop.js"
     );
     script.setAttribute("id", "xpresspay-script");
     script.onload = resolve;
@@ -23,7 +19,7 @@ function loadXpressPayScript(ENV_MODE) {
 }
 
 function payWithXpressPay(config) {
-  loadXpressPayScript(config.ENV_MODE)
+  loadXpressPayScript()
     .then(() => {
       XpressPayPop.setup({
         public_key: config.public_key,
